@@ -29,7 +29,13 @@ It does require that your devices are registered with the [Find My](https://www.
 {% include integrations/config_flow.md %}
 
 {% warning %}
-You may receive recurring emails and notifications from Apple stating that someone has logged into your account if the integration is improperly configured. If this occurs, select `Don't Allow` on your iOS device and reconfigure the Integration Credentials when prompted.
+You may receive recurring emails and notifications from Apple stating that someone has logged into your account if the integration is improperly configured. If this occurs, select `Don't Allow` on your iOS device and reconfigure the Integration Credentials when prompted. Reconfiguring is done as follows:
+
+1. In the Home Assistant user interface, go to Settings, Devices & Services, Integration.
+2. The first item on that page should show an error with the Apple iCloud integration. If nothing shows up, wait a while, and try again later.
+3. Select the link to fix the issue.
+4. Apple iCloud prompts to re-authenticate, with a message that includes a verification code. (The verification code will likely be sent to your iPhone.)
+5. Enter your iCloud password and the verification code. This should re-enable the authentication.
 
 For the notification, press "Allow", then "OK".
 {% endwarning %}
